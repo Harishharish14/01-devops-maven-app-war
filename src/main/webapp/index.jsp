@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Welcome to Ashok IT :: Leading software Training institute</h2>
 </body>
 </html>
