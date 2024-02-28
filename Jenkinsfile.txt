@@ -1,0 +1,18 @@
+pipeline{
+    agent any
+    environment {
+        PATH = "$PATH:/opt/apache-maven-3.6.3/bin"
+    }
+    stages{
+        stage('GetCode'){
+            steps{
+                git branch: 'main', changelog: false, credentialsId: 'Git_Credentials', poll: false, url: 'https://github.com/Harishharish14/01-devops-maven-app-war.git'
+            }
+        }
+        stage("Build"){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
